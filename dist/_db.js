@@ -1,41 +1,22 @@
-let reviews = [
-    {
-        "id": "1",
-        "rating": 4,
-        "content": "PlayStation 5",
-        "author_id": "201",
-        "game_id": "101"
-    },
-    {
-        "id": "2",
-        "rating": 5,
-        "content": "Xbox Series X",
-        "author_id": "202",
-        "game_id": "102"
-    }
+const reviews = [
+    { id: '1', rating: 9, content: 'lorem ipsum', author_id: '1', game_id: '2' },
+    { id: '2', rating: 10, content: 'lorem ipsum', author_id: '2', game_id: '1' },
+    { id: '3', rating: 7, content: 'lorem ipsum', author_id: '3', game_id: '3' },
+    { id: '4', rating: 5, content: 'lorem ipsum', author_id: '2', game_id: '4' },
+    { id: '5', rating: 8, content: 'lorem ipsum', author_id: '2', game_id: '5' },
+    { id: '6', rating: 7, content: 'lorem ipsum', author_id: '1', game_id: '2' },
+    { id: '7', rating: 10, content: 'lorem ipsum', author_id: '3', game_id: '1' },
 ];
-let games = [
-    {
-        "id": "101",
-        "title": "The Legend of Example",
-        "platform": ["Nintendo Switch", "PlayStation 4"]
-    },
-    {
-        "id": "102",
-        "title": "Space Adventure",
-        "platform": ["PC", "Xbox One"]
-    }
+const games = [
+    { id: '1', title: 'Zelda, Tears of the Kingdom', platform: ['Switch'] },
+    { id: '2', title: 'Final Fantasy 7 Remake', platform: ['PS5', 'Xbox'] },
+    { id: '3', title: 'Elden Ring', platform: ['PS5', 'Xbox', 'PC'] },
+    { id: '4', title: 'Mario Kart', platform: ['Switch'] },
+    { id: '5', title: 'Pokemon Scarlet', platform: ['PS5', 'Xbox', 'PC'] },
 ];
-let authors = [
-    {
-        "id": "201",
-        "name": "John Doe",
-        "verified": true
-    },
-    {
-        "id": "202",
-        "name": "Jane Doe",
-        "verified": false
-    }
+const authors = [
+    { id: '1', name: 'mario', verified: true },
+    { id: '2', name: 'yoshi', verified: false },
+    { id: '3', name: 'peach', verified: true },
 ];
 export default { reviews, authors, games };

@@ -24,6 +24,24 @@ const resolvers={
         author(_ ,args){
             return db.authors.find((author)=>author.id=args.id);
         },
+    },
+    Game:{
+        reviews(parent){
+            return db.reviews.filter((r)=> r.game_id===parent.id);
+        }
+    },
+    Author:{
+        reviews(parent){
+            return db.reviews.filter((r)=> r.author_id===parent.id);
+        }
+    },
+    Review:{
+        author(parent){
+            return db.authors.find((a)=>a.id == parent.author_id)
+        },
+        game(parent){
+            return db.games.find((g)=>g.id == parent.game_id)
+        }
     }
 }
 
@@ -32,5 +50,5 @@ const server= new ApolloServer({typeDefs, resolvers});
 
 const {url} = await startStandaloneServer(server, {listen: {port:4000}});
 
-console.log("server ready at localhost:", 4000);
+console.log("server ready at http://localhost:4000");
 
